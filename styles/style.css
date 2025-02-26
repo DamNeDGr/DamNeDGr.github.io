@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap');
+
+
+:root{
+    --color-white: #FFFFFF;
+    --color-greay: #868686;
+    --color-accent: #FF5533;
+    --color-primary: #262A2F;
+    --grid-column-width: 101px;
+    --grid-gap: 20px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #ebebeb;
+    font-size: 22px;
+    font-weight: 400;  
+}
+
+.header{
+    padding-top: 38px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 101px);
+    gap: var(--grid-gap);
+}
+
+
+.container{
+    max-width: 1435px;
+    margin: 0 auto;
+}
+
+
+.navigation__logo{
+    grid-column: span 4;
+}
+
+.navigation__list{
+    margin-top: 0;
+    display: flex;
+    grid-column: 5/-1;
+    list-style: none;
+}
+
+.navigation__item{
+    margin-right: 60px;
+}
+
+
+.navigation__item:last-child{
+    margin-right: 0;
+}
+
+
+.navigation__link{
+    font-size: 24px;
+    color: var(--color-primary);
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.navigation__link:hover{
+    color: var(--color-accent);
+}
+
+.navigation__link:active{
+    color: var(--color-accent);
+}
+
+
+
+/*      MAIN       */
+
+main{
+    margin-top: 138px;
+}
+
+.articles {
+    margin-bottom: 135px;
+}
+
+
+.articles__big-column{
+    grid-column: span 9;
+}
+
+
+.articles__small-column{
+    grid-column: 10/-1;
+}
+
+.article-category{
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.main-article__title{
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 50px;
+    color: var(--color-primary);
+    margin-bottom: 34px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-article__title:active{
+    color: var(--color-accent);
+}
+
+
+.main-article__title:hover{
+    opacity: 0.8;
+}
+
+.main-article__text{
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 34px;
+    color: var(--color-primary);
+    overflow: hidden;
+}
+
+.article-source{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-greay);
+}
+
+
+.article-date{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+
+.main-article {
+    display: grid;
+    grid-template-columns: repeat(9, var(--grid-column-width));
+    gap: var(--grid-gap);
+    margin-bottom: 95px;
+}
+
+
+.main-article:last-child{
+    margin-bottom: 0;
+}
+
+.main-article__image-container {
+    position: relative;
+    grid-column: span 3;
+    min-height: 185px;
+    max-height: 344px;
+}
+
+.main-article__content {
+    grid-column: 4/-1;
+    padding-right: 63px;
+}
+
+.main-article__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.main-article__category {
+    margin-bottom: 7px;
+}
+
+
+.small-article {
+    margin-bottom: 35px;
+    border-left: 9px solid var(--color-primary);
+    padding-left: 11px;
+}
+
+
+.small-article:last-child {
+    margin-bottom: 0px;
+}
+
+
+.small-article__title {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 14px;
+    transition: 0.4s;
+}
+
+.small-article__title:hover{
+    color: var(--color-accent);
+}
+
+.small-article__date {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.small-article__source {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+/*      FOOTER     */
+
+
+.footer {
+    background-color: var(--color-primary);
+    padding-top: 22px;
+    padding-bottom: 56px;
+}
+
+.footer__navigation .navigation__logo {
+    width: 163px;
+    grid-column: span 2;
+    padding-right: 56px;
+}
+
+.footer__navigation .navigation__logo img {
+    max-width: 163px;
+}
+
+.footer__navigation .navigation__list{
+    grid-column: 5/-1;
+}
+
+.footer__navigation .navigation__link {
+    color: var(--color-white);
+}
+
+.footer__navigation .navigation__link:hover{
+    color: var(--color-accent);
+}
+
