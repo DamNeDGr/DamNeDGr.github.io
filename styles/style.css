@@ -232,7 +232,6 @@ main{
 
 .footer {
     background-color: var(--color-primary);
-    width: 1920px;
     padding-top: 22px;
     padding-bottom: 56px;
 }
