@@ -20,7 +20,7 @@ const escapeHTML = (string) => {
         '&': '&amp',
         '<': '&lt',
         '>': '&gt',
-        '"': '&gt',
+        '«': '&gt',
     }
     return string.replace(/[&<>]/g, (tag) => {
         return symb[tag] || tag;
