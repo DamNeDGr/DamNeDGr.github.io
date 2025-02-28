@@ -177,7 +177,22 @@ main{
     grid-column: span 3;
     min-height: 185px;
     max-height: 344px;
+    border: 1px black solid;
 }
+
+.main-article__image-container::before{
+    content: "No Image";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 
 .main-article__content {
     grid-column: 4/-1;
