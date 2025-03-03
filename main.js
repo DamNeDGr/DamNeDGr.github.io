@@ -91,7 +91,7 @@ const App = () => {
     }
 
     React.useEffect(() => {
-        fetch('http://frontend.karpovcourses.net/api/v2/ru/news/' + categoryId[category] || '')
+        fetch('https://frontend.karpovcourses.net/api/v2/ru/news/' + categoryId[category] || '')
         .then(response => response.json())
         .then((response) => {
             setArticles(response);
