@@ -18,6 +18,28 @@ const categoryNames = {
 }
 /*-------------------------------------*/
 //COMPONENTS
+const Navigation = ({ navClick, currentCategory, className }) => {
+    return (
+        <nav className={`navigation grid ${className}`}>
+            <a onClick={navClick} href="/" data-href="index" className="navigation__logo"><img src="./img/ico/logo.svg" alt="Logo"/></a>
+            <ul className="navigation__list">
+                {['index', 'fashion', 'tech', 'politics', 'sport'].map((item) => {
+                    return (
+                        <li className="navigation__item" key={item}>
+                            <a 
+                            onClick={navClick} 
+                            data-href={item} 
+                            href="#" 
+                            className={`navigation__link ${currentCategory === item ? 'navigation__link--active' : ''}`}
+                            >{ categoryNames[item] }</a>
+                        </li>
+                    )
+                })} 
+            </ul>
+        </nav>
+    )
+}
+
 
 const MainArticle = ({title, image, category, description, source}) => {
     return (
@@ -80,25 +102,11 @@ const App = () => {
         <React.Fragment>
             <header className="header">
                 <div className="container">
-                    <nav className="navigation grid">
-                        <a onClick={navClick} data-href="index" href="/" className="navigation__logo"><img src="./img/ico/logo.svg" alt="Logo"/></a>
-                        <ul className="navigation__list">
-                            {['index', 'fashion', 'tech', 'politics', 'sport'].map((item) => {
-                                return (
-                                    <li className="navigation__item" key={item}>
-                                        <a 
-                                        onClick={navClick} 
-                                        data-href={item} 
-                                        href="#" 
-                                        className={`navigation__link ${category === item ? 'navigation__link--active' : ''}`}
-                                        >{ categoryNames[item] }</a>
-                                    </li>
-                                )
-                            })}
-                            
-                            
-                        </ul>
-                    </nav>
+                    <Navigation
+                    className={''}
+                        navClick={navClick}
+                        currentCategory={category}
+                    />
                 </div>
             </header>
             <main className="main">
@@ -136,23 +144,11 @@ const App = () => {
             </main>
             <footer className="footer">
                 <div className="container">
-                    <nav className="navigation grid footer__navigation">
-                        <a onClick={navClick} href="/" data-href="index" className="navigation__logo"><img src="./img/ico/logo.svg" alt="Logo"/></a>
-                        <ul className="navigation__list">
-                            {['index', 'fashion', 'tech', 'politics', 'sport'].map((item) => {
-                                return (
-                                    <li className="navigation__item" key={item}>
-                                        <a 
-                                        onClick={navClick} 
-                                        data-href={item} 
-                                        href="#" 
-                                        className={`navigation__link ${category === item ? 'navigation__link--active' : ''}`}
-                                        >{ categoryNames[item] }</a>
-                                    </li>
-                                )
-                            })} 
-                        </ul>
-                    </nav>
+                    <Navigation
+                        className="footer__navigation"
+                        navClick={navClick}
+                        currentCategory={category}
+                    />
                 </div>
             </footer>
         </React.Fragment>
