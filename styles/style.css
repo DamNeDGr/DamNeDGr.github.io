@@ -8,6 +8,7 @@
     --color-primary: #262A2F;
     --grid-column-width: 101px;
     --grid-gap: 20px;
+    --container-width: 1435px;
 }
 
 *{
@@ -34,7 +35,7 @@ body {
 
 
 .container{
-    max-width: 1435px;
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 
@@ -265,6 +266,7 @@ main{
     background-color: var(--color-primary);
     padding-top: 22px;
     padding-bottom: 56px;
+    min-width: var(--container-width);
 }
 
 .footer__navigation .navigation__logo {
