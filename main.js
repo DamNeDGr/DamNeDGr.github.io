@@ -55,6 +55,8 @@ const SmallArticle = ({title, date, source}) => {
 /*-------------------------------------*/
 
 
+
+
 //MAIN APP
 
 const App = () => {
@@ -124,6 +126,7 @@ const App = () => {
                                         key={item.title}
                                         title={item.title}
                                         date={new Date(item.date).toLocaleDateString('ru-RU',{month: 'long', day: 'numeric'})}
+                                        source={ articles.sources.find(({id}) => item.source_id === id).name }
                                     />
                                 )
                             })}
