@@ -6,7 +6,7 @@ const categoryId = {
     fashion: 3,
     tech: 1,
     politics: 4,
-    sport: 3,
+    sport: 2,
 }
 
 const categoryNames = {
