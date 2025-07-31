@@ -1,20 +1,19 @@
 //DATA
 
-
 const categoryId = {
     index: 0,
-    fashion: 3,
     tech: 1,
-    politics: 4,
     sport: 2,
+    fashion: 3,
+    politics: 4,
 }
 
 const categoryNames = {
     index: 'Главная',
-    fashion: 'Мода',
     tech: 'Технологии',
-    politics: 'Политика',
     sport: 'Спорт',
+    fashion: 'Мода',
+    politics: 'Политика',
 }
 /*-------------------------------------*/
 //COMPONENTS
@@ -113,7 +112,7 @@ const App = () => {
                 <section className="articles">
                     <div className="container grid">
                         <section className="articles__big-column">
-                            {articles.items.slice(0, 3).map((item) => {
+                            {articles.items.slice(3, 9).map((item) => {
                                 return (
                                     <MainArticle
                                         key={item.title}

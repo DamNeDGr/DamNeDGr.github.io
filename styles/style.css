@@ -49,6 +49,7 @@ body {
     display: flex;
     grid-column: 5/-1;
     list-style: none;
+    align-items: center;
 }
 
 .navigation__item{
